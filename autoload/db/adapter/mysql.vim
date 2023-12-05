@@ -13,7 +13,7 @@ endfunction
 
 function! s:command_for_url(url) abort
   let params = db#url#parse(a:url).params
-  let command = ['mysql']
+  let command = ['mariadb']
 
   for i in keys(params)
     let command += ['--'.i.'='.params[i]]
